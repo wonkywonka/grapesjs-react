@@ -2,9 +2,6 @@
 
 import type { BlockContentType } from 'types/grapes';
 
-/**
- * Custom block class
- */
 class GBlock {
   /**
    * Block Id

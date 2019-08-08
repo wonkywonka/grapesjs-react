@@ -33887,8 +33887,6 @@ function GEditor(props) {
       editor = _useState2[0],
       setEditor = _useState2[1];
 
-      console.log('hello')
-
   useEffect(function () {
     if (!editor) {
       var plugins = [gjsBasicBlocks].concat(_toConsumableArray(props.plugins));
@@ -33930,13 +33928,11 @@ function GEditor(props) {
         _editor.BlockManager.add(block.id, block);
       });
 
-
       if (customStorageManager){
-        _editor && _editor.StorageManager.add('custom1',customStorageManager);
-        loadData && loadData(_editor && _editor.load)
+        _editor.StorageManager.add('custom1',customStorageManager);
+        loadData && loadData(_editor.load)
       }
 
-      
       setEditor(_editor);
     } else {
       if (document) {
